@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:1299 #配置服务器
+      label: master #分支
+      name: zuul_application #github上面名称
+      profile: dev #环境 这里是开发的时候，写死了运行的环境，我们在打包的时候，应该动态起来，根据运行的参数动态选择环境
+      #profile: ${spring.actives.profile}  #获取运行的参数
